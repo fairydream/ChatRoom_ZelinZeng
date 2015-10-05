@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Front End Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script type="text/javascript">
+      function logoutuser()
+      {
+          $('body').hide("slow", function() {
+            document.cookie = "username"+'=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+          window.location.replace("/");
+          });
+          
+      }
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" id="topnavbar">
+        <button class="btn btn-info pull-left" id="logout" onclick="logoutuser()"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
+    </nav>
+  <div class="container-full" id="chatareacontainer">
+    <div class="seperator">
+      <ul class="pages">
+        <li class="chat page">
+          <div class="chatArea">
+            <ul class="messages"></ul>
+          </div>
+          <nav class="navbar navbar-default  navbar-fixed-bottom" id="bottomnavbar">
+                <input type="text" class="form-control" id="inputMessage" placeholder="Type here...">
+          </nav>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>

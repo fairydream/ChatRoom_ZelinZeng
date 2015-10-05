@@ -1,0 +1,13 @@
+{
+  "name": "expressTestsession",
+  "version": "0.0.0",
+  "description": "test session",
+  "main": "index.js",
+  "author": "zelinz",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "express": "3.4.8",
+    "ejs": "^1.0.0"
+  }
+}

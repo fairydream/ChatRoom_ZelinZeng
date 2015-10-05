@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+	<title>Login</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap-social.css" rel="stylesheet" type="text/css">	
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>	
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript">
+	function validRequired(field,alertxt)
+	{
+		with(field)
+		{
+			var trimval;
+			if(value!=null){
+				trimval = value.trim();
+			}
+			if(trimval==null||trimval=="")
+			{
+				alert(alertxt);return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+	}
+	function validform(thisform)
+	{
+		with(thisform)
+		{
+			if(validRequired(username,"username is not correct")==false)
+			{
+				username.focus();
+				return false;
+			}
+		}
+	}
+	</script>
+	<style>
+	*{ margin:0; padding:0; list-style:none;}
+	img{ border:0;}
+	body{ background:#ccc;}
+
+	.lanrenzhijia{ width:50px; height:250px; position:fixed; left:0; top:50%; margin-top:-125px; z-index:900;}
+	.lanrenzhijia a{ width:50px; height:50px; line-height:50px; float:left; display:block; text-align:right;}
+	.lanrenzhijia .lanren1{ background:#305790;}
+	.lanrenzhijia .lanren2{ background:#2BA9D2;}
+	.lanrenzhijia .lanren3{ background:#CF4C3A;}
+	.lanrenzhijia .lanren4{ background:#4698CA;}
+	.lanrenzhijia .lanren5{ background:#F9694E;}
+</style>
+</head>
+<body class="templatemo-bg-image-1">
+	<div class="container">
+		<div class="col-md-12">			
+			<form class="form-horizontal templatemo-login-form-2" role="form" onsubmit="return validform(this)" action="/login" method="post">
+				<div class="row">
+					<div class="col-md-12">
+						<legend id="login-title" class="text-center"><span class="blue">Azure</span> <span class="yellow">is</span> <span class="green"> > </span><span class="red">Fabulous</span></legend>
+						<p class="text-center">This is a simple public chat room deployed on Azure.</p> <p class="text-center">Invite your friends to enjoy it!</p>
+					</div>
+				</div>
+				<div class="row" id="input-form-12">
+					<div class="templatemo-one-signin col-md-12">
+				        <div class="form-group">
+				          <div class="col-md-12">		          	
+				            <label for="username" class="control-label">Username</label>
+				            <div class="templatemo-input-icon-container">
+				            	<i class="fa fa-user"></i>
+				            	<input type="text" name="username" class="form-control" id="username" placeholder="">
+				            </div>		            		            		            
+				          </div>              
+				        </div>
+				        <div class="form-group">
+				          <div class="col-md-12">
+				            <input id='mBtn' type="submit" value="LOG IN" class="btn btn-warning">
+				          </div>
+				        </div>
+					</div>
+				</div>				 	
+		      </form>		      		      
+		</div>
+	</div>
+	<div class="lanrenzhijia">
+	<a href="https://www.facebook.com/profile.php?id=100007327364977" class="lanren1"><img src="http://demo.lanrenzhijia.com/2015/jquery0120/images/lanren01.jpg" width="50" height="50" /></a>
+	<a href="https://twitter.com/Zelin_The_One" class="lanren2"><img src="http://demo.lanrenzhijia.com/2015/jquery0120/images/lanren02.jpg" width="50" height="50" /></a>
+	<a href="https://plus.google.com/108565125460013660684" class="lanren3"><img src="http://demo.lanrenzhijia.com/2015/jquery0120/images/lanren03.jpg" alt="懒人之家" width="50" height="50" /></a>
+	<a href="https://www.linkedin.com/in/zelinzeng" class="lanren4"><img src="http://demo.lanrenzhijia.com/2015/jquery0120/images/lanren04.jpg" width="50" height="50" /></a>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.lanrenzhijia a').hover(function(){
+		$(this).animate({width:'65px'},300);	
+	},function(){
+	$(this).animate({width:'50px'},300);	
+	});
+});
+</script>
+</body>
+</html>
